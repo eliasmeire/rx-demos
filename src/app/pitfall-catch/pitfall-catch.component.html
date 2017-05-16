@@ -1,0 +1,7 @@
+<div>
+  <div>
+    <input #topic [value]="DEFAULT_TOPIC" />
+    <button (click)="topic$.next(topic.value)">Get new gif!</button>
+  </div>
+  <img [src]="(gifUrl$|async) || ''" alt="A random gif">
+</div>
